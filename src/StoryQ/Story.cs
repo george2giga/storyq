@@ -1,13 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using StoryQ.Infrastructure;
 
-// tells the parser what our entry points are:
-[assembly:ParserEntryPointAttribute(typeof(StoryQ.Infrastructure.StoryQEntryPoints))]
-
 namespace StoryQ
 {
-
     /// <summary>
     /// The [Story] story fragment.
     /// This is the root item of any story
@@ -21,8 +17,7 @@ namespace StoryQ
         /// Starts a new StoryQ Story.
         /// </summary>
         /// <param name="text">The name of the new Story</param>
-
-        public Story(string text) : base(new Step("story is", 0, text, Step.DoNothing), null){ }
+        public Story(string text) : base(new Step("story is", 0, text, Step.DoNothing), null) { }
 
         /// <summary>
         /// in order to [Benefit].
@@ -62,7 +57,7 @@ namespace StoryQ
     /// </summary>
     public class Benefit : FragmentBase
     {
-        internal Benefit(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Benefit(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// and [Benefit].
@@ -105,7 +100,6 @@ namespace StoryQ
             ((IStepContainer)this).Step.Tags.Add(tag.Trim().Trim('#'));
             return this;
         }
-
     }
 
     /// <summary>
@@ -118,7 +112,7 @@ namespace StoryQ
     /// </summary>
     public class Role : FragmentBase
     {
-        internal Role(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Role(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// or as a [Role].
@@ -174,7 +168,7 @@ namespace StoryQ
     /// </summary>
     public class Feature : FragmentBase
     {
-        internal Feature(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Feature(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// and [Feature].
@@ -230,7 +224,7 @@ namespace StoryQ
     /// </summary>
     public class Scenario : FragmentBase
     {
-        internal Scenario(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Scenario(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// given [Condition].
@@ -375,7 +369,7 @@ namespace StoryQ
     /// </summary>
     public class Condition : FragmentBase
     {
-        internal Condition(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Condition(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// and [Condition].
@@ -641,7 +635,7 @@ namespace StoryQ
     /// </summary>
     public class Operation : FragmentBase
     {
-        internal Operation(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Operation(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// and [Operation].
@@ -907,7 +901,7 @@ namespace StoryQ
     /// </summary>
     public class Outcome : FragmentBase
     {
-        internal Outcome(Step step, IStepContainer parent) : base(step, parent){ }
+        internal Outcome(Step step, IStepContainer parent) : base(step, parent) { }
 
         /// <summary>
         /// and [Outcome].
@@ -1193,4 +1187,3 @@ namespace StoryQ
         }
     }
 }
-

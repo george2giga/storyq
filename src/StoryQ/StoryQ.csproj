@@ -98,11 +98,7 @@
     <Compile Include="Formatting\Parameters\ToStringParameterFormatAttribute.cs" />
     <Compile Include="Infrastructure\IStepContainer.cs" />
     <Compile Include="Infrastructure\ParserEntryPointAttribute.cs" />
-    <Compile Include="StoryQ.flit.g.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoryQ.flit.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Story.cs" />
     <Compile Include="Formatting\Parameters\BooleanParameterFormatAttribute.cs" />
     <Compile Include="Formatting\Formatter.cs" />
     <Compile Include="Formatting\Methods\MethodFormatAttribute.cs" />
@@ -139,17 +135,9 @@
     <Content Include="Execution\Rendering\RichHtml\RichHtml.xslt" />
     <Content Include="Execution\Rendering\RichHtml\storyq.css" />
     <Content Include="Execution\Rendering\RichHtml\storyq.js" />
-    <Content Include="FluentInterface\StoryQ.txt" />
-    <Content Include="FluentInterface\StoryQ.txt.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="StoryQ.flit.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>StoryQ.flit.g.cs</LastGenOutput>
-    </None>
-    <None Include="FluentInterface\rundot.bat" />
-    <None Include="FluentInterface\StoryQ.txt.svg" />
     <None Include="StoryQ.public.snk" />
     <None Include="StoryQ.snk" />
   </ItemGroup>
