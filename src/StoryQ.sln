@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D91658FC-18A2-4939-B43C-BACEBE12DFA1}"
 	ProjectSection(SolutionItems) = preProject
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
@@ -13,14 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryQ.Tests", "StoryQ.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryQ.Demo", "StoryQ.Demo\StoryQ.Demo.csproj", "{3AEF0977-08EA-4DB0-85E6-F10FBD9812B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryQ.Converter.Wpf", "StoryQ.Converter.Wpf\StoryQ.Converter.Wpf.csproj", "{46A93025-0EBE-43F0-8EA2-214CC01CA378}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryQ.Converter.Wpf.Specifications", "StoryQ.Converter.Wpf.Specifications\StoryQ.Converter.Wpf.Specifications.csproj", "{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}"
-EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = StoryQ.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_MSTest|Any CPU = Debug_MSTest|Any CPU
 		Debug_Nunit|Any CPU = Debug_Nunit|Any CPU
@@ -45,20 +40,14 @@ Global
 		{3AEF0977-08EA-4DB0-85E6-F10FBD9812B4}.Debug_Nunit|Any CPU.Build.0 = Debug_Nunit|Any CPU
 		{3AEF0977-08EA-4DB0-85E6-F10FBD9812B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AEF0977-08EA-4DB0-85E6-F10FBD9812B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Debug_MSTest|Any CPU.ActiveCfg = Debug|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Debug_MSTest|Any CPU.Build.0 = Debug|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Debug_Nunit|Any CPU.ActiveCfg = Debug|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Debug_Nunit|Any CPU.Build.0 = Debug|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46A93025-0EBE-43F0-8EA2-214CC01CA378}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Debug_MSTest|Any CPU.ActiveCfg = Debug_MSTest|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Debug_MSTest|Any CPU.Build.0 = Debug_MSTest|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Debug_Nunit|Any CPU.ActiveCfg = Debug_Nunit|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Debug_Nunit|Any CPU.Build.0 = Debug_Nunit|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C1A1DD5-5C8D-4166-9162-4AC5D8C609CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D13F17D8-80E4-4002-8F15-B54865CAD66F}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = StoryQ.vsmdi
 	EndGlobalSection
 EndGlobal

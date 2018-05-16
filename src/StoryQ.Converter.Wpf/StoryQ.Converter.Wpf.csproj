@@ -14,8 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <ManifestCertificateThumbprint>239E99DE490FC4F896A53FCED53BA6F46E23CEF6</ManifestCertificateThumbprint>
-    <ManifestKeyFile>StoryQ.Converter.Wpf_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>61AD5B22044E9B8A382CC61C2AF6DC70AB7DFFD3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>StoryQ.Converter.Wpf_1_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -168,6 +168,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="StoryQ.Converter.Wpf_1_TemporaryKey.pfx" />
     <None Include="StoryQ.Converter.Wpf_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
