@@ -1,13 +1,4 @@
-﻿// ***********************************************************************
-// Assembly         : StoryQ
-// Last Modified By : William Forney
-// Last Modified On : 05-22-2016
-// ***********************************************************************
-// <copyright file="Formatter.cs" company="">
-//     2010 robfe and toddb
-// </copyright>
-// ***********************************************************************
-namespace StoryQ.Formatting
+﻿namespace StoryQ.Formatting
 {
     using System;
     using System.Diagnostics;
@@ -15,7 +6,6 @@ namespace StoryQ.Formatting
     using System.Reflection;
     using StoryQ.Formatting.Methods;
     using StoryQ.Formatting.Parameters;
-    using StoryQ.Infrastructure;
 
     /// <summary>
     /// A StoryQ infrastructure class that can format a given StoryQ Test method into a human-friendly (even if the human

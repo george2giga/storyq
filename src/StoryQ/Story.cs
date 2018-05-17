@@ -5,11 +5,11 @@ using StoryQ.Infrastructure;
 namespace StoryQ
 {
     /// <summary>
-    /// The [Story] story fragment.
+    /// The [Story] fragment.
     /// This is the root item of any story
-    /// <h1>Transitions:</h1><ul>
-    /// <li>in order to [<see cref="Benefit"/>]: <see cref="InOrderTo(string)"/></li>
-    /// </ul>
+    /// Transitions:
+    /// in order to [<see cref="Benefit"/>]: <see cref="InOrderTo(string)"/>
+    /// 
     /// </summary>
     public class Story : FragmentBase
     {
@@ -44,16 +44,14 @@ namespace StoryQ
             ((IStepContainer)this).Step.Tags.Add(tag.Trim().Trim('#'));
             return this;
         }
-
     }
 
     /// <summary>
     /// The [Benefit] story fragment.
     /// The real-world objective (business value) of a story
-    /// <h1>Transitions:</h1><ul>
-    /// <li>and [<see cref="Benefit"/>]: <see cref="And(string)"/></li>
-    /// <li>as a [<see cref="Role"/>]: <see cref="AsA(string)"/></li>
-    /// </ul>
+    /// Transitions:
+    /// and [<see cref="Benefit"/>]: <see cref="And(string)"/>
+    /// as a [<see cref="Role"/>]: <see cref="AsA(string)"/>
     /// </summary>
     public class Benefit : FragmentBase
     {
@@ -1165,25 +1163,25 @@ namespace StoryQ
         }
     }
 
-    namespace Infrastructure
-    {
-        /// <summary>
-        /// Entry points for the StoryQ converter's parser
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public class StoryQEntryPoints
-        {
-            /// <summary>
-            /// For infrastructure use only
-            /// </summary>
-            [Description("This is the root item of any story")]
-            [Alias("Story is")]
-            [Alias("Feature:")]
-            protected Story Story(string text)
-            {
-                return new Story(text);
-            }
+    //namespace Infrastructure
+    //{
+    //    /// <summary>
+    //    /// Entry points for the StoryQ converter's parser
+    //    /// </summary>
+    //    [EditorBrowsable(EditorBrowsableState.Never)]
+    //    public class StoryQEntryPoints
+    //    {
+    //        /// <summary>
+    //        /// For infrastructure use only
+    //        /// </summary>
+    //        [Description("This is the root item of any story")]
+    //        [Alias("Story is")]
+    //        [Alias("Feature:")]
+    //        protected Story Story(string text)
+    //        {
+    //            return new Story(text);
+    //        }
 
-        }
-    }
+    //    }
+    //}
 }

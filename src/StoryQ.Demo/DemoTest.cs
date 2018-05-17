@@ -8,6 +8,8 @@ using ClassCleanup = NUnit.Framework.TestFixtureTearDownAttribute;
 using ClassInitialize = NUnit.Framework.TestFixtureSetUpAttribute;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StoryQ.Infrastructure;
+
 #endif
 
 namespace StoryQ.Demo
