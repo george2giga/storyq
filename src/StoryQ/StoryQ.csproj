@@ -73,32 +73,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Execution\Rendering\IRenderer.cs" />
+    <Compile Include="Execution\Rendering\TextRenderer.cs" />
+    <Compile Include="Execution\Rendering\XmlCategoriser.cs" />
+    <Compile Include="Execution\Rendering\XmlFileManagerBase.cs" />
+    <Compile Include="Execution\Rendering\XmlRenderer.cs" />
     <Compile Include="Formatting\Methods\OverrideMethodFormatAttribute.cs" />
     <Compile Include="Infrastructure\AliasAttribute.cs" />
     <Compile Include="Infrastructure\ExceptionHelper.cs" />
-    <Compile Include="Execution\Rendering\RichHtml\RichHtmlFileManager.cs" />
-    <Compile Include="Execution\Rendering\RichHtml\Dependencies.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dependencies.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Execution\Rendering\XmlFileManagerBase.cs" />
-    <Compile Include="Execution\Rendering\SimpleHtml\SimpleHtmlDependencies.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SimpleHtmlDependencies.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Execution\Rendering\SimpleHtml\SimpleHtmlFileManager.cs" />
-    <Compile Include="Execution\Rendering\TextRenderer.cs" />
-    <Compile Include="Execution\Rendering\IRenderer.cs" />
-    <Compile Include="Execution\Rendering\XmlCategoriser.cs" />
-    <Compile Include="Execution\Rendering\XmlRenderer.cs" />
     <Compile Include="Execution\Result.cs" />
     <Compile Include="Execution\ResultType.cs" />
     <Compile Include="Formatting\Parameters\ToStringParameterFormatAttribute.cs" />
     <Compile Include="Infrastructure\IStepContainer.cs" />
     <Compile Include="Story.cs" />
-    <Compile Include="Formatting\Parameters\BooleanParameterFormatAttribute.cs" />
     <Compile Include="Formatting\Formatter.cs" />
     <Compile Include="Formatting\Methods\MethodFormatAttribute.cs" />
     <Compile Include="Formatting\Parameters\ParameterFormatAttribute.cs" />
@@ -111,29 +98,6 @@
     <Compile Include="StoryQSettings.cs" />
     <Compile Include="Infrastructure\StringBasedExecutableStepException.cs" />
     <Compile Include="Infrastructure\Utilities.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Execution\Rendering\RichHtml\Dependencies.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Dependencies.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Execution\Rendering\SimpleHtml\SimpleHtmlDependencies.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SimpleHtmlDependencies.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Execution\Rendering\SimpleHtml\SimpleHtml.xslt" />
-    <Content Include="Execution\Rendering\RichHtml\images\minus.gif" />
-    <Content Include="Execution\Rendering\RichHtml\images\plus.gif" />
-    <Content Include="Execution\Rendering\RichHtml\images\storyq-icons.png" />
-    <Content Include="Execution\Rendering\RichHtml\images\treeview-default-line.gif" />
-    <Content Include="Execution\Rendering\RichHtml\images\treeview-default.gif" />
-    <Content Include="Execution\Rendering\RichHtml\jquery-1.4.2.min.js" />
-    <Content Include="Execution\Rendering\RichHtml\jquery.tagcloud.min.js" />
-    <Content Include="Execution\Rendering\RichHtml\jquery.treeview.min.js" />
-    <Content Include="Execution\Rendering\RichHtml\RichHtml.xslt" />
-    <Content Include="Execution\Rendering\RichHtml\storyq.css" />
-    <Content Include="Execution\Rendering\RichHtml\storyq.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StoryQ.public.snk" />

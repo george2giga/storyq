@@ -39,7 +39,7 @@ namespace StoryQ.Demo
                 .When(this.IClickThe_Button, "Buy")
                 .And(this.TheBrowserPostsMyCreditCardNumberOverTheInternet)
                 .Then(this.TheForm_BePostedOverHttps, true).Tag("sprint 1")
-                .ExecuteWithReport(MethodBase.GetCurrentMethod());
+                .Execute();
         }
 
         [TestMethod]
@@ -56,7 +56,7 @@ namespace StoryQ.Demo
 
                 // because the following method throws NotImplementedException, this step counts as pending:
                 .Then(this.TheForm_BePostedOverHttpsPending, true).Tag("this one ought to pend")
-                .ExecuteWithReport(MethodBase.GetCurrentMethod());
+                .Execute();
 
         }
 
@@ -74,7 +74,7 @@ namespace StoryQ.Demo
 
                 // because it's passing a string into an excecutable step (which normallly expects a method is expected), this step counts as pending:
                 .Then("The form should be posted over https").Tag("this one ought to pend")
-                .ExecuteWithReport(MethodBase.GetCurrentMethod());
+                .Execute();
 
         }
 
@@ -92,14 +92,18 @@ namespace StoryQ.Demo
                 .When(this.IClickThe_Button, "non existent").Tag("this one should fail")
                 .And(this.TheBrowserPostsMyCreditCardNumberOverTheInternet).Tag("sprint 1")
                 .Then(this.TheForm_BePostedOverHttps, true).Tag("Nice formatting").Tag("sprint 1")
-                .ExecuteWithReport(MethodBase.GetCurrentMethod());
+                .Execute();
         }
 
         #endregion
 
         #region Step methods
 
-        private void TheForm_BePostedOverHttps([BooleanParameterFormat("should", "should not")]bool isHttps)
+        //private void TheForm_BePostedOverHttps([BooleanParameterFormat("should", "should not")]bool isHttps)
+        //{
+        //}
+
+        private void TheForm_BePostedOverHttps(bool isHttps)
         {
         }
 

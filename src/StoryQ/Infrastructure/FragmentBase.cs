@@ -19,8 +19,6 @@ namespace StoryQ.Infrastructure
     using System.Reflection;
     using StoryQ.Execution;
     using StoryQ.Execution.Rendering;
-    using StoryQ.Execution.Rendering.RichHtml;
-    using StoryQ.Execution.Rendering.SimpleHtml;
     using StoryQ.Formatting;
 
     /// <summary>
@@ -81,22 +79,22 @@ namespace StoryQ.Infrastructure
             ((IStepContainer)this).Execute(new TextRenderer(Console.Out));
         }
 
-        /// <summary>
-        /// Runs the current sequence of Steps, reporting to an xml(+xslt) file augmented with jQuery
-        /// widget for interactive viewing of the results.  This method requires a reference to
-        /// the "current" method in order to categorise results, you should pass in "MethodBase.GetCurrentMethod()".
-        /// Reports are written to the current directory, look for an xml file beginning with "StoryQ".
-        /// If you prefer to have a non interactive report (for example if you are using a legacy browser), set "StoryQSettings.ReportSupportsLegacyBrowsers = true"
-        /// </summary>
-        /// <param name="currentMethod">The current method (use "MethodBase.GetCurrentMethod()")</param>
-        public void ExecuteWithReport(MethodBase currentMethod)
-        {
-            var manager = StoryQSettings.ReportSupportsLegacyBrowsers
-                ? (XmlFileManagerBase)SimpleHtmlFileManager.Instance
-                : RichHtmlFileManager.Instance;
+        ///// <summary>
+        ///// Runs the current sequence of Steps, reporting to an xml(+xslt) file augmented with jQuery
+        ///// widget for interactive viewing of the results.  This method requires a reference to
+        ///// the "current" method in order to categorise results, you should pass in "MethodBase.GetCurrentMethod()".
+        ///// Reports are written to the current directory, look for an xml file beginning with "StoryQ".
+        ///// If you prefer to have a non interactive report (for example if you are using a legacy browser), set "StoryQSettings.ReportSupportsLegacyBrowsers = true"
+        ///// </summary>
+        ///// <param name="currentMethod">The current method (use "MethodBase.GetCurrentMethod()")</param>
+        //public void ExecuteWithReport(MethodBase currentMethod)
+        //{
+        //    var manager = StoryQSettings.ReportSupportsLegacyBrowsers
+        //        ? (XmlFileManagerBase)SimpleHtmlFileManager.Instance
+        //        : RichHtmlFileManager.Instance;
 
-            ((IStepContainer)this).Execute(new TextRenderer(Console.Out), manager.Categoriser.GetRenderer(currentMethod));
-        }
+        //    ((IStepContainer)this).Execute(new TextRenderer(Console.Out), manager.Categoriser.GetRenderer(currentMethod));
+        //}
 
         /// <summary>
         /// This overload infers the current method with 'new StackFrame(1).GetMethod()'. If it doesn't work, call the overload that takes a method
@@ -106,10 +104,10 @@ namespace StoryQ.Infrastructure
         /// Reports are written to the current directory, look for an xml file beginning with "StoryQ".
         /// If you prefer to have a non interactive report (for example if you are using a legacy browser), set "StoryQSettings.ReportSupportsLegacyBrowsers = true"
         /// </summary>
-        public void ExecuteWithReport()
-        {
-            this.ExecuteWithReport(new StackFrame(1).GetMethod());
-        }
+        //public void ExecuteWithReport()
+        //{
+        //    this.ExecuteWithReport(new StackFrame(1).GetMethod());
+        //}
 
         /// <summary>
         /// Runs the current sequence of Steps against a renderer
